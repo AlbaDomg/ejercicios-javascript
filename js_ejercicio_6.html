@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 6 - Temporizador con Inicio, Pausa y Reinicio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .timer-display {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: monospace;
+      color: var(--accent-color);
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #0d0d0d;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      margin: 1.5rem 0;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 480px) {
+      .timer-display { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 6:</span> Temporizador con Inicio, Pausa y Reinicio</h1>
+    <p class="page-description">
+      Controla el tiempo en formato horas:minutos:segundos usando funciones de temporización en JavaScript.
+    </p>
+
+    <div class="card" style="max-width: 550px; margin: 0 auto; text-align: center;">
+      <div id="timer-text" class="timer-display">
+        00:00:00
+      </div>
+
+      <div class="btn-group" style="justify-content: center;">
+        <button id="btn-start" class="btn">
+          Iniciar
+        </button>
+        <button id="btn-pause" class="btn btn-secondary">
+          Pausar
+        </button>
+        <button id="btn-reset" class="btn btn-danger">
+          Reiniciar
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_6.js"></script>
+</body>
+</html>

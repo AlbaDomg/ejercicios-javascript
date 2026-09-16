@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 - Contador de Clicks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .counter-display {
+      margin: 1.5rem 0;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 2:</span> Contador de Clics</h1>
+    <p class="page-description">
+      Cada vez que hagas clic en el botón, el contador se incrementará en 1.
+    </p>
+
+    <div class="card" style="max-width: 500px; margin: 0 auto; text-align: center;">
+      <div id="counter-text" class="counter-display">
+        Clics: 0
+      </div>
+
+      <div class="btn-group" style="justify-content: center;">
+        <button id="btn-count" class="btn" style="flex: 1;">
+          Contar clics
+        </button>
+        <button id="btn-reset" class="btn btn-secondary">
+          Reiniciar
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_2.js"></script>
+</body>
+</html>

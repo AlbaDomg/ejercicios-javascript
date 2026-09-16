@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 9 - Lista de Tareas con LocalStorage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .task-input-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .task-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.1rem;
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+    .task-left {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex: 1;
+    }
+    .task-checkbox {
+      width: 1.2rem;
+      height: 1.2rem;
+      accent-color: var(--accent-color);
+      cursor: pointer;
+    }
+    .task-text {
+      font-size: 1rem;
+      transition: color 0.2s, text-decoration 0.2s;
+    }
+    .task-item.completed .task-text {
+      text-decoration: line-through;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+    .empty-state {
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 1.5rem;
+    }
+    .task-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 9:</span> Lista de Tareas con LocalStorage</h1>
+    <p class="page-description">
+      Administra tus tareas pendientes. Los datos persisten automáticamente en el navegador mediante <code>localStorage</code>.
+    </p>
+
+    <div class="card" style="max-width: 650px; margin: 0 auto;">
+      <div class="task-input-group">
+        <input type="text" id="task-input" placeholder="Escribe una nueva tarea..." autocomplete="off">
+        <button id="btn-add-task" class="btn">Agregar</button>
+      </div>
+
+      <ul id="task-list" class="task-list">
+        <!-- Las tareas se renderizarán dinámicamente -->
+      </ul>
+      <div id="empty-state" class="empty-state">No tienes tareas guardadas. ¡Añade una arriba!</div>
+
+      <div class="task-footer">
+        <span id="task-counter" style="color: var(--text-muted); font-size: 0.9rem;">0 tareas restantes</span>
+        <button id="btn-clear-completed" class="btn btn-secondary" style="font-size: 0.9rem;">
+          Limpiar completadas
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_9.js"></script>
+</body>
+</html>

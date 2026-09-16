@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="36" height="30">
+  <!-- Fondo ovalado negro con borde sutil -->
+  <ellipse cx="60" cy="50" rx="55" ry="42" fill="#000000" />
+  <!-- Asta de la bandera en blanco -->
+  <rect x="38" y="24" width="5" height="52" rx="2.5" fill="#ffffff" />
+  <!-- Bandera ondeante en blanco -->
+  <path d="M 43 27 C 58 22, 70 34, 92 26 L 92 50 C 70 58, 58 46, 43 51 Z" fill="#ffffff" />
+</svg>

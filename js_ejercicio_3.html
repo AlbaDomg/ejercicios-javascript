@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 - Lista Dinámica</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .input-group {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .list-container {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .empty-msg {
+      color: var(--text-muted);
+      text-align: center;
+      font-style: italic;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 3:</span> Lista Dinámica</h1>
+    <p class="page-description">
+      Escribe un elemento y pulsa "Agregar" para insertarlo en la lista. Puedes eliminarlo en cualquier momento.
+    </p>
+
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div class="input-group">
+        <input type="text" id="item-input" placeholder="Escribe un elemento..." autocomplete="off">
+        <button id="btn-add" class="btn">Agregar</button>
+      </div>
+
+      <ul id="dynamic-list" class="list-container">
+        <!-- Los elementos agregados aparecerán aquí -->
+      </ul>
+      <div id="empty-msg" class="empty-msg">La lista está vacía. ¡Añade tu primer elemento!</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_3.js"></script>
+</body>
+</html>

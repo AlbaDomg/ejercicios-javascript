@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8 - Contador de Palabras y Caracteres</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 480px) {
+      .metrics-grid { grid-template-columns: 1fr; }
+    }
+    .metric-card {
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .metric-label {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .metric-value {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 8:</span> Contador de Palabras y Caracteres</h1>
+    <p class="page-description">
+      Escribe tu texto en el área de texto para ver el conteo de palabras y caracteres en tiempo real.
+    </p>
+
+    <div class="card" style="max-width: 650px; margin: 0 auto;">
+      <div class="form-group">
+        <label for="text-input">Ingresa un párrafo de texto:</label>
+        <textarea id="text-input" rows="6" placeholder="Escribe o pega tu texto aquí..."></textarea>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Caracteres (sin espacios ni saltos):</div>
+          <div id="char-count" class="metric-value">0</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Palabras ingresadas:</div>
+          <div id="word-count" class="metric-value">0</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_8.js"></script>
+</body>
+</html>

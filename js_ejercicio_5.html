@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5 - Calculadora Sencilla</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .calc-inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 480px) {
+      .calc-inputs { grid-template-columns: 1fr; }
+    }
+    .ops-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 480px) {
+      .ops-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .result-display {
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .result-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      margin-top: 0.5rem;
+    }
+    .error-msg {
+      color: var(--danger-color);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 5:</span> Calculadora Sencilla</h1>
+    <p class="page-description">
+      Introduce dos números y selecciona una operación matemática para calcular el resultado.
+    </p>
+
+    <div class="card" style="max-width: 550px; margin: 0 auto;">
+      <div class="calc-inputs">
+        <div class="form-group" style="margin: 0;">
+          <label for="num1">Primer Número:</label>
+          <input type="number" id="num1" placeholder="Ej: 10" step="any">
+        </div>
+        <div class="form-group" style="margin: 0;">
+          <label for="num2">Segundo Número:</label>
+          <input type="number" id="num2" placeholder="Ej: 5" step="any">
+        </div>
+      </div>
+
+      <label>Operación:</label>
+      <div class="ops-grid">
+        <button id="btn-add" class="btn">Sumar (+)</button>
+        <button id="btn-subtract" class="btn">Restar (-)</button>
+        <button id="btn-multiply" class="btn">Multiplicar (&times;)</button>
+        <button id="btn-divide" class="btn">Dividir (&divide;)</button>
+      </div>
+
+      <div class="result-display">
+        <div>Resultado de la operación:</div>
+        <div id="result-value" class="result-value">---</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_5.js"></script>
+</body>
+</html>

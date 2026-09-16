@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 7 - Generador de Contraseñas Aleatorias</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .password-display {
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: monospace;
+      color: var(--accent-color);
+      background: #0d0d0d;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      text-align: center;
+      margin-top: 1.5rem;
+      word-break: break-all;
+    }
+    .error-container {
+      color: var(--danger-color);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo-conquer.png" alt="Conquer Blocks Logo" class="logo-img">
+        <span><span class="brand-highlight">Conquer Blocks</span>: Ejercicios JavaScript</span>
+      </a>
+      <a href="index.html" class="back-link">&larr; Volver al índice</a>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title"><span class="title-highlight">Ejercicio 7:</span> Generador de Contraseñas Aleatorias</h1>
+    <p class="page-description">
+      Especifica la longitud deseada y genera una contraseña segura con letras, números y caracteres especiales.
+    </p>
+
+    <div class="card" style="max-width: 550px; margin: 0 auto;">
+      <div class="form-group">
+        <label for="length-input">Longitud de la contraseña (mínimo 4):</label>
+        <input type="number" id="length-input" placeholder="Ej: 12" min="4" value="12">
+        <div id="error-msg" class="error-container"></div>
+      </div>
+
+      <button id="btn-generate" class="btn" style="width: 100%;">
+        Generar contraseña
+      </button>
+
+      <div id="password-result" class="password-display">
+        ---
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Entrega de Ejercicios JavaScript - Alba Domínguez García</p>
+  </footer>
+
+  <script src="js_ejercicio_7.js"></script>
+</body>
+</html>
