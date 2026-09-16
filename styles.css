@@ -17,6 +17,7 @@
   --radius-lg: 16px;
   --radius-md: 10px;
   --font-family: 'Plus Jakarta Sans', 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 * {
@@ -28,6 +29,8 @@
 body {
   font-family: var(--font-family);
   background-color: var(--bg-primary);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
@@ -76,6 +79,7 @@ header {
 
 .title-highlight {
   color: var(--accent-color);
+  font-weight: 800;
 }
 
 .logo-img {
@@ -110,8 +114,8 @@ main {
 
 .page-title {
   font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
   color: #ffffff;
 }
 
@@ -183,11 +187,21 @@ input:focus, textarea:focus, select:focus {
   text-decoration: none;
 }
 
+.btn .arrow {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .btn:hover {
   background: var(--accent-hover);
   color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.btn:hover .arrow,
+.exercise-card:hover .btn .arrow {
+  transform: translateX(4px);
 }
 
 .btn:active {
@@ -232,9 +246,10 @@ input:focus, textarea:focus, select:focus {
 .exercise-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
+  border-left: 3px solid transparent;
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -242,23 +257,27 @@ input:focus, textarea:focus, select:focus {
 
 .exercise-card:hover {
   background: var(--bg-card-hover);
-  transform: translateY(-4px);
-  border-color: var(--accent-color);
-  box-shadow: 0 12px 20px -5px rgba(245, 158, 11, 0.2);
+  border-left-color: var(--accent-color);
+  border-top-color: rgba(245, 158, 11, 0.3);
+  border-right-color: rgba(245, 158, 11, 0.3);
+  border-bottom-color: rgba(245, 158, 11, 0.3);
+  transform: translateY(-3px) translateX(2px);
+  box-shadow: 0 14px 28px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 158, 11, 0.12);
 }
 
 .exercise-number {
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent-color);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
 }
 
 .exercise-title {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
